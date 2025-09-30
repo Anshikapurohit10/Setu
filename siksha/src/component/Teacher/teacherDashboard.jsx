@@ -21,7 +21,7 @@ export default function TeacherDashboard() {
   // 1️⃣ Teacher ka naam backend se fetch karna
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/profile/me", { withCredentials: true })
+      .get("https://setu-h683.onrender.com/api/profile/me", { withCredentials: true })
       .then((res) => {
         setTeacherName(res.data.user.name);
       })
