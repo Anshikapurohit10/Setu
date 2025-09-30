@@ -50,7 +50,7 @@ const Registration = () => {
 
       // Send profile data
       await axios.post(
-        "http://localhost:5000/api/profile",
+        "https://setu-h683.onrender.com/api/profile",
         {
           collegeId: formData.collegeId,
           collegeName: formData.collegeName,
