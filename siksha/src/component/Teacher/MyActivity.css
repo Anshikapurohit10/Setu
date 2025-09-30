@@ -1,0 +1,122 @@
+.my-activities-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.activities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.activities-header h1 {
+  font-size: 28px;
+  color: #1e2a47;
+}
+
+.upload-new-btn {
+  background-color: #4a6cf7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.upload-new-btn:hover {
+  background-color: #3451d1;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.activity-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1a237e;
+  flex-grow: 1;
+}
+
+.card-category {
+  font-style: italic;
+  color: #555;
+  margin: 0 0 15px 0;
+}
+
+.card-date {
+  font-size: 13px;
+  color: #777;
+  margin-top: auto; /* Pushes date to the bottom */
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.no-activities-message {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ... (existing styles) */
+
+.activity-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer; /* Add this line */
+  transition: transform 0.2s, box-shadow 0.2s; /* Optional: add hover effect */
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ... (rest of the styles) */

@@ -1,0 +1,179 @@
+/* Page layout */
+/* NewActivity.css */
+
+/* Overall container */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9fbff;
+}
+
+/* Topbar */
+.upload-container h2 {
+  display: none; /* We already have "Add new activity" styled button */
+}
+.upload-container textarea {
+  width: 100%;
+  height: 250px;   /* ⬅️ increase height */
+  padding: 10px;
+  border: 1px solid #ccd7f0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  resize: vertical;
+   margin-bottom: 15px;  /* allows user to resize manually (optional) */
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f1f5fb;
+  border-bottom: 1px solid #dce3f0;
+}
+.h2{
+    font: optional;
+}
+.topbar .icon {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #4a5ea1;
+}
+
+/* Layout */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 60px;
+  background: #2f4aa2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.sidebar .menu-icon {
+  font-size: 20px;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+/* Activity form area */
+.form-section {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left side (upload box) */
+.upload-box {
+  flex: 2;
+  border: 2px dashed #9bb1f0;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2c3a69;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 40px;
+   margin-bottom: 15px;
+}
+.upload-container input[type="text"] {
+  width: 50%;         /* ⬅️ reduced width */
+  height: 70px;       /* ⬅️ smaller height */
+  padding: 10px 12px;
+  border: 1px solid #ccd7f0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 40px;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+  width: 90%;          /* ⬅️ control width */
+  height: 48px;        /* ⬅️ control height */
+  padding: 5px;
+  border: 1px solid #ccd7f0;
+  border-radius: 6px;
+  background: #f1f5fb;
+  font-size: 14px;
+  cursor: pointer;
+   margin-bottom: 40px;
+}
+.upload-container input[type="file"]::file-selector-button {
+  background: #3958be;   /* button ka color */
+  color: white;
+  border: none;
+  padding: 10px 15px;    /* yaha se height/width control hoti hai */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 50px;
+  width: 180px;
+   margin-bottom: 40px;
+   margin-top: 30px;
+}
+
+.upload-container input[type="file"]::file-selector-button:hover {
+  background: #3a499e;   /* hover effect */
+}
+/* Right side (title, description, uploaded files) */
+.details-box {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.details-box input,
+.details-box textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd7f0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.details-box textarea {
+  height: 1000px;
+  resize: none;
+}
+
+.uploaded-files {
+  background: #f1f5fb;
+  border: 1px solid #ccd7f0;
+  border-radius: 6px;
+  padding: 10px;
+  min-height: 1000px;
+}
+
+/* Upload button */
+button {
+  background: #3e5bb8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3a54e3;
+}

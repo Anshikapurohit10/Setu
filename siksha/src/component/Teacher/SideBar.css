@@ -1,0 +1,89 @@
+ 
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: calc(100vh - 64px);
+  width: 70px; 
+  background: #314e9e;
+  padding-top: 20px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1000;
+}
+.sidebar:hover ~ .main-content {
+  margin-left: 220px;  /* utna adjust hoga jitna sidebar expand hua */
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #f9fafb;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+.sidebar:hover {
+  width: 220px; 
+}
+/* .sidebar .icon {
+  font-size: 22px;  
+  margin-right: 12px; 
+  flex-shrink: 0;
+} */
+.sidebar .menu li span {
+  font-size: 16px;  /* text ka size bhi set kar lo */
+  font-weight: 500;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 8px 0;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  padding: 19px 19px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* icons */
+.icon {
+  font-size: 20px;
+  margin-right: 12px;
+  min-width: 25px;
+  text-align: center;
+  
+}
+
+/* collapsed text hidden */
+.sidebar:not(:hover) .menu li a span {
+  display: none;
+   
+}
+
+/* collapsed mein card-like design (background separate look) */
+.sidebar:not(:hover) .menu li a {
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: auto;
+}
+
