@@ -12,7 +12,7 @@ import {
   FaCheckCircle,
   FaSignOutAlt,
 } from "react-icons/fa";
-import "./Sidebar.css";
+import "./SideBar.css";
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
