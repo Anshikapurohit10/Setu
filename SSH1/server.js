@@ -23,7 +23,12 @@ app.use(rateLimit({ windowMs: 60 * 1000, max: 120 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://setu-3ous.onrender.com', // ✅ allow only this frontend
+    credentials: true // ✅ allow cookies/auth headers
+}));
+
 
 // Database connect
 mongoose
