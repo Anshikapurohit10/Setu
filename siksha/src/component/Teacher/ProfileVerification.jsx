@@ -42,7 +42,7 @@ const fetchProfiles = async () => {
     try {
       const token = localStorage.getItem("tresetu_token");
       await axios.delete(
-        `http://localhost:5000/api/admin/profiles/${id}/reject`,
+        `https://setu-h683.onrender.com/api/admin/profiles/${id}/reject`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setProfiles(profiles.filter((p) => p._id !== id));
