@@ -27,7 +27,7 @@ const fetchProfiles = async () => {
     try {
       const token = localStorage.getItem("tresetu_token");
       await axios.put(
-        `http://localhost:5000/api/admin/profiles/${id}/approve`,
+        `https://setu-h683.onrender.com/api/admin/profiles/${id}/approve`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
