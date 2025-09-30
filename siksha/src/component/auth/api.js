@@ -21,9 +21,13 @@
 import axios from "axios";
 
 // Create axios instance
-const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api", // backend base URL
-  withCredentials: true,
+// const API = axios.create({
+//   baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api", // backend base URL
+//   withCredentials: true,
+// });
+const api = axios.create({
+  baseURL: "https://setu-h683.onrender.com/api",
+  withCredentials: true // ✅ important for cookies/auth
 });
 
 // Automatically attach JWT token to each request
