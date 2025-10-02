@@ -18,7 +18,7 @@ const adminRoutes = require("./routes/admin");
 
 const app = express();
 app.use(express.json({ limit: "10mb" }));
-app.use(rateLimit({ windowMs: 60 * 1000, max: 120 }));
+// app.use(rateLimit({ windowMs: 60 * 1000, max: 120 }));
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
