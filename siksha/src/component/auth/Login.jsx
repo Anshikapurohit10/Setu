@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await API.post("https://setu-h683.onrender.com//auth/register", { email, password, name, role });
+      const res = await API.post("/auth/register", { email, password, name, role });
 
       if (res.data?.token) {
         localStorage.setItem("tresetu_token", res.data.token);
@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await API.post("https://setu-h683.onrender.com//auth/login", { email, password });
+      const res = await API.post("/auth/login", { email, password });
 
       if (res.data?.token) {
         localStorage.setItem("tresetu_token", res.data.token);
