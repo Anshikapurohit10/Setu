@@ -59,5 +59,6 @@ export default function Header() {
     <User className="profile-icon" />
   </button>
 </header>
-
+);
+}
 
