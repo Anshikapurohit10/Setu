@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-
+import teacherImg from "../assets/20250918_014444_0001.png;
 export default function TeacherDashboard() {
   const [pendingRequests, setPendingRequests] = useState([]);
   const [teacherName, setTeacherName] = useState("");
@@ -72,7 +72,7 @@ export default function TeacherDashboard() {
         <a href="#">View</a>
       </div>
       <div className="image">
-        <img src="src/assets/20250918_014444_0001.png" alt="Teacher" />
+        <img src={teacherImg} alt="Teacher" />
       </div>
     </div>
 
