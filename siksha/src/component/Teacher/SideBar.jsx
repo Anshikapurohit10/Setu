@@ -54,7 +54,7 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/result">
+              <NavLink to="/TrisetuPage">
                 <FaFileAlt className="icon" /> <span>Result</span>
               </NavLink>
             </li>
