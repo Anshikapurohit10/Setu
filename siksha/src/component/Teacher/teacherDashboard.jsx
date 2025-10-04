@@ -67,7 +67,7 @@ export default function TeacherDashboard() {
 
     <div className="greeting-content">
       <div className="text">
-        <h1>Hello {teacherName}! 👋</h1>
+        <h1>Hello Teacher {teacherName}! 👋</h1>
         <p>You have 5 new tasks. Let’s start the work...</p>
         <a href="#">View</a>
       </div>
