@@ -4,7 +4,10 @@ import React
  from 'react'
 import "./studentDash.css"
 import { Link } from "react-router-dom";
-
+import welcomeImg from "../../assets/WhatsApp Image 2025-09-19 at 9.35.00 PM.jpeg";
+import progressImg from "../../assets/WhatsApp Image 2025-09-19 at 9.31.17 PM.jpeg";
+import assignmentImg from "../../assets/WhatsApp Image 2025-09-19 at 9.34.22 PM.jpeg";
+import activityImg from "../../assets/WhatsApp Image 2025-09-19 at 9.34.12 PM.jpeg";
 import { PieChart, Pie, Cell, Tooltip, BarChart, Bar, XAxis, YAxis, Legend, ResponsiveContainer } from "recharts";
 export default function StudentDashboard() {
     const performanceData = [
@@ -19,31 +22,6 @@ export default function StudentDashboard() {
   { subject: "DS", percentage: 62 },
   { subject: "ML", percentage: 93 },
 ];
-// const [assignments, setAssignments] = useState([]);
-// useEffect(() => {
-//   const fetchAssignments = async () => {
-//     try {
-//       const token = localStorage.getItem("tresetu_token"); // your JWT stored in localStorage
-//        if (!token) {
-//         console.error("No token found. Please login.");
-//         return;
-//       }
-//       const res = await fetch("http://localhost:5000/api/assignment", {
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: `Bearer ${token}`, // ✅ send token
-//         },
-//       });
-      
-//       const data = await res.json();
-//       console.log("Assignments fetched:", data.assignments);
-//       if (data.success) setAssignments(data.assignments);
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
-//   fetchAssignments();
-// }, []);
 
   return (
     <div className="dashboard">
@@ -83,43 +61,7 @@ export default function StudentDashboard() {
   </div>
 </div>
 
-          {/* {assignments.map((a) => (
-    <Link key={a._id} to={`/student/assignments/${a._id}`} className="card">
-   <span>{a.title}</span>
-      <p>{a.description}</p>
-      {a.attachments &&
-      a.attachments.map((file, index) => (
-        <a
-          key={index}
-          href={`http://localhost:5000/uploads/${file}`}
-          target="_blank"
-          rel="noreferrer"
-          style={{ display: "block", marginTop: "4px", color: "#4952ce", textDecoration: "underline" }}
-        >
-          {file}
-        </a>
-      ))}
-
-        <img
-          src="src/assets/WhatsApp Image 2025-09-19 at 9.34.22 PM.jpeg"
-          alt="students"
-        />
-      
-    </Link>
-  ))} */}
-             {/* <Link to="/student/StudentAssignments" className="card">
-        <span>Assignments</span>
-        <img
-          src="src/assets/WhatsApp Image 2025-09-19 at 9.34.22 PM.jpeg"
-          alt="students"
-        />
-      </Link> */}
-          {/* <div className="card">Assignments
-            <img
-            src="src/assets/WhatsApp Image 2025-09-19 at 9.34.22 PM.jpeg"
-            alt="students"
-          />
-          </div> */}
+          
             <div className="card performance">
             <h3>Performance</h3>
             <ResponsiveContainer width={120} height={120}>
