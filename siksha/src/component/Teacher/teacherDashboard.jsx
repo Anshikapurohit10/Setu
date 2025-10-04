@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-import teacherImg from "../assets/20250918_014444_0001.png";
+import teacherImg from "../../assets/20250918_014444_0001.png";
 export default function TeacherDashboard() {
   const [pendingRequests, setPendingRequests] = useState([]);
   const [teacherName, setTeacherName] = useState("");
