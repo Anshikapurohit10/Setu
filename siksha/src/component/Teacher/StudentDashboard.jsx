@@ -38,7 +38,7 @@ export default function StudentDashboard() {
             </p>
           </div>
           <img
-            src="src/assets/WhatsApp Image 2025-09-19 at 9.35.00 PM.jpeg"
+            src={welcomeImg}
             alt="students"
           />
         </div>
@@ -46,7 +46,7 @@ export default function StudentDashboard() {
         <div className="grid-cards">
           <div className="card">My Progress
             <img
-            src="src/assets/WhatsApp Image 2025-09-19 at 9.31.17 PM.jpeg"
+            src={progressImg}
             alt="students"
           />
           </div>
@@ -55,7 +55,7 @@ export default function StudentDashboard() {
     <h3>Assignments</h3>
     <p>Click to view all your assignments</p>
     <img
-          src="src/assets/WhatsApp Image 2025-09-19 at 9.34.22 PM.jpeg"
+          src={assignmentImg}
           alt="students"
         />
   </div>
@@ -115,7 +115,7 @@ export default function StudentDashboard() {
               yourself.
             </p>
             <img
-            src="src/assets/WhatsApp Image 2025-09-19 at 9.34.12 PM.jpeg"
+            src={activityImg}
             alt="students"
           />
           </div>
