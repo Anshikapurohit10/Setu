@@ -1,108 +1,4 @@
-// import { useState } from "react";
-// import VerifyActivityList from "./VerifyActivityList";
-// import TActivityDetailModel from "./TVerifyActivityDetail";
 
-// const VerifyActivity = () => {
-//   const [selected, setSelected] = useState(null);
-
-//   return (
-//     <>
-//       {selected ? (
-//         <TActivityDetailModel
-//           activity={selected}
-//           onBack={() => setSelected(null)}
-//         />
-//       ) : (
-//         <VerifyActivityList onSelect={setSelected} />
-//       )}
-//     </>
-//   );
-// };
-
-// export default VerifyActivity;
-// import React, { useState, useEffect } from 'react';
-// import Api from '../auth/api';
-// import TActivityDetailModal from './TActivityDetailModel';
-// import './VerifyActivity.css';
-
-// const VerifyActivities = () => {
-//   const [activities, setActivities] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [selectedActivity, setSelectedActivity] = useState(null);
-
-//   const fetchActivities = async () => {
-//     try {
-//       const res = await Api.get('/admin/activities/pending'); // The new endpoint
-//       setActivities(res.data.list);
-//     } catch (error) {
-//       console.error("Failed to fetch pending activities", error);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchActivities();
-//   }, []);
-
-//   const handleApprove = async (activityId) => {
-//     try {
-//       await Api.put(`/admin/activities/${activityId}/approve`);
-//       alert('Activity Approved!');
-//       setActivities(activities.filter(a => a._id !== activityId));
-//       setSelectedActivity(null);
-//     } catch (error) {
-//       alert('Failed to approve.');
-//     }
-//   };
-
-//   const handleReject = async (activityId) => {
-//     try {
-//       await Api.put(`/admin/activities/${activityId}/reject`);
-//       alert('Activity Rejected.');
-//       setActivities(activities.filter(a => a._id !== activityId));
-//       setSelectedActivity(null);
-//     } catch (error) {
-//       alert('Failed to reject.');
-//     }
-//   };
-
-//   if (loading) return <div className="loading-container">Loading Activities...</div>;
-
-//   return (
-//     <div className="verification-container">
-//       <h1>Verify Student Activities</h1>
-//       <div className="verification-list">
-//         {activities.length > 0 ? (
-//           activities.map(activity => (
-//             <div key={activity._id} className="verification-item">
-//               <div className="item-info">
-//                 <strong>{activity.title}</strong>
-//                 <span>Student: {activity.student.name}</span>
-//               </div>
-//               <button onClick={() => setSelectedActivity(activity)} className="details-btn">
-//                 View Details
-//               </button>
-//             </div>
-//           ))
-//         ) : (
-//           <p>No activities are pending verification.</p>
-//         )}
-//       </div>
-
-//       {selectedActivity && (
-//         <TActivityDetailModal
-//           activity={selectedActivity}
-//           onClose={() => setSelectedActivity(null)}
-//           onApprove={handleApprove}
-//           onReject={handleReject}
-//         />
-//       )}
-//     </div>
-//   );
-// };
-
-// export default VerifyActivities;
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../auth/api';
@@ -151,6 +47,7 @@ const VerifyActivities = () => {
       setActivities(activities.filter(a => a._id !== activityId));
       setSelectedActivity(null);
     } catch (error) {
+      console.error(error);
       alert('Failed to approve.');
     }
   };
@@ -162,6 +59,7 @@ const VerifyActivities = () => {
       setActivities(activities.filter(a => a._id !== activityId));
       setSelectedActivity(null);
     } catch (error) {
+      console.error(error);
       alert('Failed to reject.');
     }
   };
